@@ -1,0 +1,532 @@
+/* ==========================================================================
+   TripGunung - Stylesheet
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Reset & Base
+   -------------------------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #17251e;
+  background: #f7f8f5;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --------------------------------------------------------------------------
+   2. Navbar
+   -------------------------------------------------------------------------- */
+.navbar {
+  height: 76px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 18px #00000012;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: #2f8f55;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: #2f8f55;
+}
+
+/* --------------------------------------------------------------------------
+   3. Buttons
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-block;
+  background: #2f8f55;
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  padding: 13px 23px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #237342;
+}
+
+.btn-small {
+  padding: 9px 18px;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #fff;
+}
+
+/* --------------------------------------------------------------------------
+   4. Hero
+   -------------------------------------------------------------------------- */
+.hero {
+  min-height: 650px;
+  position: relative;
+  background-image: url("img/atas.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 80px 10%;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #07150dcc 0%, #07150d66 48%, #07150d22 100%);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 680px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  color: #a9dfb9;
+  margin-bottom: 12px;
+}
+
+.eyebrow.dark {
+  color: #2f8f55;
+}
+
+.hero h1 {
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: 0.98;
+  letter-spacing: -4px;
+  margin-bottom: 24px;
+}
+
+.hero h1 span {
+  color: #9dddac;
+}
+
+.hero-text {
+  max-width: 560px;
+  font-size: 17px;
+  color: #e8eee9;
+  margin-bottom: 30px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.hero-badge {
+  position: absolute;
+  right: 9%;
+  bottom: 50px;
+  background: #ffffffee;
+  color: #1b2d23;
+  padding: 18px 22px;
+  border-radius: 15px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.hero-badge strong {
+  font-size: 28px;
+  color: #2f8f55;
+}
+
+.hero-badge span {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   5. Stats
+   -------------------------------------------------------------------------- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  background: #fff;
+  padding: 28px 10%;
+  box-shadow: 0 5px 20px #00000008;
+}
+
+.stats div {
+  text-align: center;
+  border-right: 1px solid #ddd;
+  padding: 0 12px;
+}
+
+.stats div:last-child {
+  border-right: 0;
+}
+
+.stats strong,
+.stats span {
+  display: block;
+}
+
+.stats strong {
+  font-size: 25px;
+}
+
+.stats span {
+  font-size: 12px;
+  color: #78837d;
+}
+
+/* --------------------------------------------------------------------------
+   6. Section (shared)
+   -------------------------------------------------------------------------- */
+.section {
+  padding: 90px 8%;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 35px;
+}
+
+.section h2,
+.feature h2,
+.booking h2 {
+  font-size: 42px;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.section-desc {
+  max-width: 300px;
+  color: #66726b;
+}
+
+/* --------------------------------------------------------------------------
+   7. Cards
+   -------------------------------------------------------------------------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px #1a352011;
+  transition: 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px #1a35201b;
+}
+
+/* Card image */
+.card-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+
+
+.image-tampomas {
+  background-image: url("img/tampomas.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.image-cikuray {
+  background-image: url("img/cikuray.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.image-apuy {
+  background-image: url("img/apuy.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.image-sadarehe {
+  background-image: url("img/sadarehe.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.image-comingsoon {
+  background-image: url("img/comingsoon.gif");
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* Card badges */
+.tag,
+.difficulty {
+  position: absolute;
+  top: 15px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.tag {
+  left: 15px;
+  background: #fff;
+}
+
+.difficulty {
+  right: 15px;
+  background: #1e2c24;
+  color: #fff;
+}
+
+/* Card body */
+.card-body {
+  padding: 22px;
+}
+
+.location {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #2f8f55;
+  font-weight: 800;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin: 4px 0 8px;
+}
+
+.card-body > p:not(.location) {
+  color: #6e7872;
+  font-size: 14px;
+}
+
+/* Card footer */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  border-top: 1px solid #eee;
+  margin-top: 18px;
+  padding-top: 16px;
+}
+
+.card-footer small {
+  display: block;
+  color: #89928c;
+  font-size: 10px;
+}
+
+.card-footer strong {
+  font-size: 18px;
+}
+
+.card-footer a {
+  color: #2f8f55;
+  font-weight: 800;
+}
+
+/* --------------------------------------------------------------------------
+   8. Feature
+   -------------------------------------------------------------------------- */
+.feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 520px;
+  background: #e9f0ea;
+}
+
+.feature-image {
+  background-image: url(img/bawah.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.feature-content {
+  padding: 70px 10%;
+  align-self: center;
+}
+
+.feature-content > p:not(.eyebrow) {
+  color: #657169;
+  margin: 20px 0;
+}
+
+.feature-content ul {
+  list-style: none;
+}
+
+.feature-content li {
+  margin: 15px 0;
+  font-weight: 700;
+}
+
+.feature-content li span {
+  color: #2f8f55;
+  margin-right: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   9. Booking
+   -------------------------------------------------------------------------- */
+.booking {
+  padding: 80px 10%;
+  background: #183127;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.booking h2 {
+  margin-bottom: 15px;
+}
+
+.booking form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.booking input,
+.booking select {
+  width: 100%;
+  padding: 15px;
+  border: 0;
+  border-radius: 9px;
+  background: #fff;
+  color: #222;
+}
+
+.booking form .btn {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+/* --------------------------------------------------------------------------
+   10. Footer
+   -------------------------------------------------------------------------- */
+footer {
+  background: #0d1d16;
+  color: #b9c4be;
+  padding: 35px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+footer .logo {
+  color: #fff;
+}
+
+/* --------------------------------------------------------------------------
+   11. Responsive (max-width: 800px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 800px) {
+  nav {
+    display: none;
+  }
+
+  .hero {
+    min-height: 600px;
+    padding: 60px 7%;
+  }
+
+  .hero-badge {
+    right: 7%;
+  }
+
+  .cards,
+  .feature,
+  .booking {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .stats div:nth-child(2) {
+    border: 0;
+  }
+
+  .section-head {
+    display: block;
+  }
+
+  .section-desc {
+    margin-top: 10px;
+  }
+
+  .booking {
+    gap: 30px;
+    padding: 60px 7%;
+  }
+
+  .booking form {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    display: block;
+  }
+
+  footer p {
+    margin-top: 8px;
+  }
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNTrip | Jelajahi Puncak Indonesia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a class="logo" href="#beranda">FUN<span>Trip</span></a>
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#paket">Paket Gunung</a>
+        <a href="#tentang">Tentang</a>
+    </nav>
+    <a class="btn btn-small" href="#pesan">Booking</a>
+</header>
+
+<section class="hero" id="beranda">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <p class="eyebrow">DIMULAI DI SINI</p>
+        <h1>Temukan Puncak<br><span>Impianmu.</span></h1>
+        <p class="hero-text">
+            Paket pendakian gunung dengan itinerary, transportasi,
+            perlengkapan, dan guide yang siap menemani perjalananmu.
+        </p>
+        <div class="hero-actions">
+            <a class="btn" href="#paket">Lihat Paket</a>
+            <a class="btn btn-outline" href="#pesan">Pesan Sekarang</a>
+        </div>
+    </div>
+    <div class="hero-badge">
+        <strong>50+</strong>
+        <span>Destinasi<br>Indonesia</span>
+    </div>
+</section>
+
+<section class="stats">
+    <div><strong data-count="80" data-suffix="+">80+</strong><span>Traveler</span></div>
+    <div><strong data-count="4">4</strong><span>Paket Trip</span></div>
+    <div><strong data-count="4.9" data-decimals="1" data-suffix="/5">4.9/5</strong><span>Rating</span></div>
+</section>
+
+<section class="section" id="paket">
+    <div class="section-head">
+        <div>
+            <p class="eyebrow dark">PILIH PETUALANGAN</p>
+            <h2>Paket Gunung Populer</h2>
+        </div>
+        <p class="section-desc">Pilih perjalanan sesuai level dan tujuanmu.</p>
+    </div>
+
+    <div class="cards">
+        <article class="card">
+            <div class="card-image image-tampomas">
+                <span class="tag">ONE DAY TRIP</span>
+            </div>
+            <div class="card-body">
+                <p class="location">JAWA BARAT</p>
+                <h3>Gunung Tampomas
+                </h3>
+                <p>Gunung Tampomas merupakan gunung berapi yang terletak di Kabupaten Sumedang, Jawa Barat. Gunung ini memiliki ketinggian sekitar 1.684 MDPL.</p>
+                <div class="card-footer">
+                    <div><small>Mulai dari</small><strong>Rp 75.000</strong></div>
+                    <a href="#pesan" onclick="pilihPaket('Gunung Tampomas')">Pesan</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-image image-cikuray">
+                <span class="tag">ONE DAY TRIP</span>
+            </div>
+            <div class="card-body">
+                <p class="location">JAWA BARAT</p>
+                <h3>Gunung Cikuray - Pemancar</h3>
+                <p>Puncaknya sangat populer karena menyajikan panorama sunrise yang ikonik serta hamparan lautan awan yang luas dan dramatis dari ketinggian.</p>
+                <div class="card-footer">
+                    <div><small>Mulai dari</small><strong>Rp 270.000</strong></div>
+                    <a href="#pesan" onclick="pilihPaket('Gunung Cikuray')">Pesan</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-image image-apuy">
+                <span class="tag">ONE DAY TRIP</span>
+            </div>
+            <div class="card-body">
+                <p class="location">JAWA BARAT</p>
+                <h3>Gunung Ciremai - Apuy</h3>
+                <p>Menjelang area atas atau sebelum puncak, pendaki akan disuguhi pemandangan khas berupa tumbuhnya bunga edelweiss.</p>
+                <div class="card-footer">
+                    <div><small>Mulai dari</small><strong>Rp 350.000</strong></div>
+                    <a href="#pesan" onclick="pilihPaket('Gunung Ciremai - Apuy')">Pesan</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-image image-sadarehe">
+                <span class="tag">2 DAYS - CAMP</span>
+            </div>
+            <div class="card-body">
+                <p class="location">JAWA BARAT</p>
+                <h3>Gunung Ciremai - Sadarehe</h3>
+                <p>Padang Savana Luas, Hamparan Bunga Edelweis.</p>
+                <div class="card-footer">
+                    <div><small>Mulai dari</small><strong>Rp 525.000</strong></div>
+                    <a href="#pesan" onclick="pilihPaket('Gunung Ciremai - Sadarehe')">Pesan</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-image image-comingsoon">
+                <span class="tag">COMING SOON</span>
+            </div>
+            <div class="card-body">
+                <p class="location">COMING SOON</p>
+                <h3>COMING SOON</h3>
+                <p> - </p>
+                <div class="card-footer">
+                    <div><small>Mulai dari</small><strong> - </strong></div>
+                    <a href="#pesan" onclick="pilihPaket('')">Pesan</a>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section class="feature" id="tentang">
+    <div class="feature-image"></div>
+    <div class="feature-content">
+        <p class="eyebrow dark">KENAPA FUNTrip?</p>
+        <h2>Naik gunung tanpa ribet.</h2>
+        <p>Kami membantu menyiapkan perjalanan dari awal sampai selesai.</p>
+        <ul>
+            <li><span>✓</span> Guide berpengalaman</li>
+            <li><span>✓</span> Itinerary perjalanan jelas</li>
+            <li><span>✓</span> Transportasi sesuai paket</li>
+            <li><span>✓</span> Support selama perjalanan</li>
+        </ul>
+    </div>
+</section>
+
+<section class="booking" id="pesan">
+    <div>
+        <p class="eyebrow">BOOKING TRIP</p>
+        <h2>Siap mendaki?</h2>
+        <p>Isi data berikut, pesananmu akan dikirim langsung ke WhatsApp kami.</p>
+    </div>
+
+    <form id="formPesan" onsubmit="return kirimWhatsApp(event)">
+        <input type="text" name="nama" id="nama" placeholder="Nama lengkap" required>
+
+        <select name="paket" id="paketSelect" required>
+            <option value="">Pilih paket gunung</option>
+            <option value="Gunung Tampomas">Gunung Tampomas</option>
+            <option value="Gunung Cikuray">Gunung Cikuray</option>
+            <option value="Gunung Ciremai - Apuy">Gunung Ciremai - Apuy</option>
+            <option value="Gunung Ciremai - Sadarehe">Gunung Ciremai - Sadarehe</option>
+        </select>
+
+        <input name="jumlah" id="jumlah" min="1" placeholder="Jumlah peserta" required>
+        <input type="date" name="tanggal" id="tanggal" required>
+
+        <button type="submit" class="btn">Pesan via WhatsApp</button>
+    </form>
+</section>
+
+<footer>
+    <div class="logo">FUN<span>Trip</span></div>
+    <p>Jelajahi puncak. Ciptakan cerita.</p>
+    <p>© 2026 FUNTrip</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
