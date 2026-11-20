@@ -1,7 +1,6 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 
-// Persentase diskon berdasarkan total belanja
 function persenDiskon(int $totalBelanja): int
 {
     if ($totalBelanja >= 100000) return 10;
@@ -9,7 +8,6 @@ function persenDiskon(int $totalBelanja): int
     return 0;
 }
 
-// Prosedur utama: menerima total belanja, mengembalikan nilai diskon (rupiah)
 function hitungDiskon(int $totalBelanja): int
 {
     return (int) round($totalBelanja * persenDiskon($totalBelanja) / 100);
@@ -51,7 +49,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $hasil['target'] = 10;
         }
 
-        // Posisi penanda pada tangga diskon (0 sampai 100 persen lebar)
         if ($total < 50000) {
             $posisi = ($total / 50000) / 3;
         } elseif ($total < 100000) {
@@ -103,7 +100,6 @@ $aktif = $hasil['persen'] ?? -1;
             align-items: start;
         }
 
-        /* ---------- Sisi kiri ---------- */
         h1 {
             margin: 0 0 12px;
             font-size: clamp(2.3rem, 5.2vw, 3.7rem);
@@ -146,9 +142,8 @@ $aktif = $hasil['persen'] ?? -1;
         .cepat { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 28px; }
 
         .cetak {
-    margin-top: 28px;   /* baris baru ini yang memberi jarak */
+    margin-top: 28px;
     padding: 14px 28px;
-    /* sisanya tetap */
 }
         .cepat button {
             padding: 6px 16px;
@@ -175,7 +170,6 @@ $aktif = $hasil['persen'] ?? -1;
         .cetak:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--tinta); }
         button:focus-visible, input:focus-visible { outline: 3px solid var(--kertas); outline-offset: 3px; }
 
-        /* Tangga diskon */
         .tangga { margin-top: 56px; max-width: 460px; }
         .tangga h2 { margin: 0 0 18px; font-size: 1rem; font-weight: 800; }
         .lintasan {
@@ -209,7 +203,6 @@ $aktif = $hasil['persen'] ?? -1;
         .tingkat span { opacity: .55; }
         .tingkat span.on { opacity: 1; font-weight: 800; color: var(--sorot); }
 
-        /* ---------- Struk ---------- */
         .kanan { padding-top: 8px; }
         .struk {
             position: relative;
